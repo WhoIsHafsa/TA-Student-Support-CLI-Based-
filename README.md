@@ -1,4 +1,4 @@
-# TA-Student-Support-CLI-Based-
+# TA Student Support (CLI-Based)
 A lightweight, CLI-based information system designed to help manage students' academic performance and attendance without requiring a heavy database.
 Logical design and pseudocode architecture developed independently; Python implementation in collaboration with AI assistance.
 
