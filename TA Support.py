@@ -48,7 +48,7 @@ def FindStudent(TargetGR):
 
 
 # =====================================================================
-# EFFICIENT BUBBLE SORT (NUMERIC SUBSTRING FROM CHAR 4 ONWARDS)
+# EFFICIENT BUBBLE SORT
 # =====================================================================
 def AutoSort():
     global StudentCount, StudentList
@@ -81,7 +81,7 @@ def AutoSort():
 
 
 # =====================================================================
-# FILE HANDLING: LOAD & SAVE (WITH HEADER & COLUMN RESTORATION)
+# FILE HANDLING: LOAD & SAVE
 # =====================================================================
 def LoadDataFromFiles():
     global StudentCount, StudentList, ActiveCols, ColNames
@@ -249,7 +249,7 @@ def EditClass():
 
 
 # =====================================================================
-# MODULE 3: PERFORMANCE TRACKER (BATCH-ENTRY MODE)
+# MODULE 3: PERFORMANCE TRACKER
 # =====================================================================
 def Academics():
     global StudentCount, StudentList, ActiveCols, ColNames, TestTotals, FlagLowPerf
@@ -396,7 +396,7 @@ def ClassTestSummary():
                 HighestMark = StudentList[Index].Marks[SelCol]
                 TopScorerGR = StudentList[Index].GRNo
 
-    # FIX 3: Only prompt for total mark and run Grade 'U' check if test data actually exists
+    # Only prompt for total mark and run Grade 'U' check if test data actually exists
     if ActiveStudentsInTest > 0:
         if TestTotals[SelCol] == 0:
             while True:
@@ -415,7 +415,6 @@ def ClassTestSummary():
         print(f"Highest Mark: {HighestMark} / {TestTotals[SelCol]}")
         print(f"G.R. Num of Top Scorer: {TopScorerGR}")
 
-        # FIX 1: Executes once strictly after summary statistics when test data exists
         print("\n--- Students Requiring Academic Assistance (Grade 'U') ---")
         flagged_count = 0
         for Index in range(1, StudentCount + 1):
@@ -481,7 +480,7 @@ def EditTestData():
             ColNames[ActiveCols] = NewName
             TestTotals[ActiveCols] = 0.0
 
-            # Initialize clean default values for all existing students in the new column
+            # Initialize default values for all existing students in the new column
             for idx in range(1, StudentCount + 1):
                 StudentList[idx].Marks[ActiveCols] = 0.0
                 StudentList[idx].Grade[ActiveCols] = " "
